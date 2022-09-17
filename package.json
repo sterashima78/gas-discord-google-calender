@@ -1,0 +1,29 @@
+{
+  "name": "gas-discord-google-calender",
+  "version": "1.0.0",
+  "description": "GAS から Discord にカレンダー通知する",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "node -e 'fs.rmSync(\"./dist\", {recursive:true, force:true})'",
+    "build": "tsc",
+    "postbuild": "node -e 'fs.copyFileSync(\"appsscript.json\", \"./dist/appsscript.json\");'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sterashima78/gas-discord-google-calender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sterashima78/gas-discord-google-calender/issues"
+  },
+  "homepage": "https://github.com/sterashima78/gas-discord-google-calender#readme",
+  "devDependencies": {
+    "@google/clasp": "^2.4.1",
+    "@tsconfig/node16-strictest": "1.0.3",
+    "@types/google-apps-script": "1.0.55",
+    "prettier": "2.7.1",
+    "typescript": "4.8.3"
+  }
+}
